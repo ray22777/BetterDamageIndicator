@@ -1,0 +1,7 @@
+/summon minecraft:zombie
+/gamemode creative
+/summon minecraft:zombie
+/gamerule random_tick_speed 3
+/gamemode adventure
+/gamemode creative
+/summon minecraft:zombie
