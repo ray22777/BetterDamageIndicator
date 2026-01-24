@@ -26,8 +26,8 @@
     "better_damage_indicator.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.18.4",
-    "minecraft": "~1.21.10",
+    "fabricloader": "*",
+    "minecraft": "*",
     "java": ">=21",
     "fabric-api": "*"
   },
