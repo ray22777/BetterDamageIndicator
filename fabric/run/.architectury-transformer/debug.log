@@ -138,3 +138,27 @@
 [Architectury Transformer DEBUG] Temporary jar [C:\Users\Ray\AppData\Local\Temp\4826874189339988213.jar] contains packages: net.ray.BetterDamageIndicator.mixin, net.ray.BetterDamageIndicator, net.ray.BetterDamageIndicator.animation, net.ray.BetterDamageIndicator.config
 [Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\Documents\ModDevNew\Better Damage Indicator\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.0.0-dev.jar
 [Architectury Transformer DEBUG] Classpath entry [C:\Users\Ray\Documents\ModDevNew\Better Damage Indicator\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\fabric\build\resources\main] contains packages: 
+[Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/config/DamageConfig.class to net/ray/BetterDamageIndicator/config/DamageConfig.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/config/DamageConfig with maxs=true frames=true
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/config/DamageConfig in 1.845 ms
+[Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/DamageTracker.class to net/ray/BetterDamageIndicator/DamageTracker.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/DamageTracker with maxs=true frames=true
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageTracker in 1.526 ms
+[Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/DamageTracker$EntityData.class to net/ray/BetterDamageIndicator/DamageTracker$EntityData.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/DamageTracker$EntityData with maxs=true frames=true
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageTracker$EntityData in 997.3 μs
+[Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/DamageRenderer.class to net/ray/BetterDamageIndicator/DamageRenderer.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/DamageRenderer with maxs=true frames=true
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageRenderer in 1.782 ms
+[Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/animation/DamageAnimations.class to net/ray/BetterDamageIndicator/animation/DamageAnimations.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/animation/DamageAnimations with maxs=true frames=true
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations in 3.002 ms
+[Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/DamageRenderer$DamageAnimation.class to net/ray/BetterDamageIndicator/DamageRenderer$DamageAnimation.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/DamageRenderer$DamageAnimation with maxs=true frames=true
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageRenderer$DamageAnimation in 346.4 μs
