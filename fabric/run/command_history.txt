@@ -5,3 +5,22 @@
 /gamemode adventure
 /gamemode creative
 /summon minecraft:zombie
+/gamemode creative
+/tp @a 45 67 25
+/tp @a 0 64 0
+/tp @a 0 80 0
+/tp @a 0 70 0
+/summon minecraft:zombie
+/gamemode creative
+/setworldspawn
+/time set day
+/damageconfig
+/damage
+/hologramconfig
+/damageindicator
+/damageconfig
+/hologram
+/hologram config
+/hologram
+/hologram config
+/damageconfig

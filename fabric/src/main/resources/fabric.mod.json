@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "better_damage_indicator",
   "version": "${version}",
-  "name": "Better Damage INdicator",
+  "name": "Better Damage Indicator",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -16,10 +16,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.ray.fabric.BetterDamageIndicator"
+      "net.ray.fabric.BetterDamageIndicator.BetterDamageIndicator"
     ],
     "client": [
-      "net.ray.fabric.client.ExampleModFabricClient"
+      "net.ray.fabric.BetterDamageIndicator.client.ExampleModFabricClient"
+    ],
+    "modmenu": [
+      "net.ray.fabric.BetterDamageIndicator.ModMenuIntegration"
     ]
   },
   "mixins": [

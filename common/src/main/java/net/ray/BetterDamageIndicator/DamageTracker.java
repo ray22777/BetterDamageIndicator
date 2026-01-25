@@ -1,12 +1,10 @@
-// DamageTracker.java
-package net.ray;
+package net.ray.BetterDamageIndicator;
 
-
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.decoration.ArmorStand;
 
 import java.util.Iterator;
 
@@ -17,46 +15,51 @@ public class DamageTracker {
 
     private static class EntityData {
         float lastHealth;
+        float lastMaxHealth;
         float damageToShow;
         int showTicks;
         int lastSeenTick;
+        boolean wasAlive;
 
-        EntityData(float initialHealth) {
+        EntityData(float initialHealth, float maxHealth) {
             this.lastHealth = initialHealth;
+            this.lastMaxHealth = maxHealth;
             this.lastSeenTick = getCurrentTick();
+            this.wasAlive = true;
         }
 
         boolean update(LivingEntity entity) {
             lastSeenTick = getCurrentTick();
 
-            float currentHealth = Math.min(entity.getHealth(), entity.getMaxHealth());
+            boolean isAlive = entity.isAlive();
+            float currentHealth = entity.getHealth();
+            float maxHealth = entity.getMaxHealth();
 
-            // Check for significant health change (>0.5 to avoid floating point noise)
-            if (Math.abs(currentHealth - lastHealth) > 0.5f) {
-                float damage = lastHealth - currentHealth;
+            if (maxHealth > lastMaxHealth) {
+                lastHealth = currentHealth;
+                lastMaxHealth = maxHealth;
+            }
 
-                if (damage > 0) {
-                    damageToShow = damage;
-                    showTicks = 40; // Show for 2 seconds (40 ticks)
+            if (currentHealth < lastHealth) {
+                float rawDamage = lastHealth - currentHealth;
 
-                    // Debug output
-                    System.out.printf("[DAMAGE] %s: -%.1f HP (%.1f -> %.1f)%n",
-                            entity.getDisplayName().getString(),
-                            damage,
-                            lastHealth,
-                            currentHealth
-                    );
+                if (rawDamage > 0) {
+                    damageToShow = rawDamage;
+                    DamageRenderer.renderDamageIndicator(entity, rawDamage);
                 }
 
                 lastHealth = currentHealth;
+            } else if (currentHealth > lastHealth) {
+                lastHealth = currentHealth;
             }
+
+            wasAlive = isAlive;
 
             // Count down display timer
             if (showTicks > 0) {
                 showTicks--;
             }
 
-            // Keep alive if recently seen or showing damage
             return (getCurrentTick() - lastSeenTick < 100) || showTicks > 0;
         }
     }
@@ -68,7 +71,7 @@ public class DamageTracker {
         EntityData data = ENTITY_DATA.get(entityId);
 
         if (data == null) {
-            data = new EntityData(entity.getHealth());
+            data = new EntityData(entity.getHealth(), entity.getMaxHealth());
             ENTITY_DATA.put(entityId, data);
         }
 
@@ -78,17 +81,16 @@ public class DamageTracker {
     }
 
     private static boolean isValidEntity(LivingEntity entity) {
-        if (!entity.isAlive() || !entity.level().isClientSide()) return false;
+        if (!entity.level().isClientSide()) return false;
         if (CLIENT.player == null) return false;
+        if (entity instanceof ArmorStand) return false;
 
-        // Only track entities within 64 blocks
         return entity.distanceTo(CLIENT.player) <= 64;
     }
 
     public static void tick() {
         cleanupCounter++;
 
-        // Cleanup every 5 seconds (100 ticks)
         if (cleanupCounter >= 100) {
             cleanupCounter = 0;
             cleanupStaleEntries();
@@ -103,7 +105,6 @@ public class DamageTracker {
             Int2ObjectMap.Entry<EntityData> entry = iterator.next();
             EntityData data = entry.getValue();
 
-            // Remove if not seen for 5 seconds and not showing damage
             if ((currentTick - data.lastSeenTick > 100) && data.showTicks <= 0) {
                 iterator.remove();
             }

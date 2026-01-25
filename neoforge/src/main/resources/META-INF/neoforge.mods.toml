@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[10,)"
+loaderVersion = "[1,)"
 #issueTrackerURL = ""
 license = "Insert License Here"
 
@@ -16,14 +16,26 @@ This is an example description! Tell everyone what your mod is about!
 [[dependencies.better_damage_indicator]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21.10,)"
+versionRange = "[21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.better_damage_indicator]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.10,)"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.better_damage_indicator]]
+modId = "cloth_config"
+type = "required"
+versionRange = "[11.1.118,)"
+ordering = "NONE"
+side = "CLIENT"
+[[dependencies.better_damage_indicator]]
+modId = "hologram_api"
+type = "required"
+versionRange = "[1.0.0,)"
 ordering = "NONE"
 side = "BOTH"
 

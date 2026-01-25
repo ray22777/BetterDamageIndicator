@@ -1,9 +1,11 @@
-package net.ray.fabric;
+package net.ray.fabric.BetterDamageIndicator;
 
 
-import net.fabricmc.api.ClientModInitializer;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+
+import net.ray.BetterDamageIndicator.config.DamageConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,9 +13,10 @@ public class BetterDamageIndicator implements ModInitializer {
     public static final String MOD_ID = "better_damage_indicator";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-
     @Override
     public void onInitialize() {
-
+        AutoConfig.register(DamageConfig.class, GsonConfigSerializer::new);
     }
+
+
 }

@@ -1,8 +1,8 @@
 // mixin/LivingEntityMixin.java
-package net.ray.mixin;
+package net.ray.BetterDamageIndicator.mixin;
 
 import net.minecraft.world.entity.LivingEntity;
-import net.ray.DamageTracker;
+import net.ray.BetterDamageIndicator.DamageTracker;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
