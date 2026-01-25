@@ -2,98 +2,106 @@ package net.ray.BetterDamageIndicator;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.ComponentUtils;
+import net.minecraft.network.chat.FormattedText;
 import net.minecraft.world.entity.Entity;
 import net.ray.BetterDamageIndicator.animation.DamageAnimations;
+import net.ray.BetterDamageIndicator.config.ConfigGetter;
+import net.ray.BetterDamageIndicator.config.IndicatorConfig;
 import net.ray.HologramAPI.Hologram;
 import net.ray.HologramAPI.HologramAPI;
-
 import java.util.Random;
 
 public class DamageRenderer {
-    // Animation interface
-    public interface DamageAnimation {
-        void apply(Hologram hologram, Random random);
-    }
+//    private static DamageAnimations currentAnimation = DamageAnimations.NEW_ANIM;
+//
+//    public static void setAnimation(DamageAnimations animation) {
+//        currentAnimation = animation;
+//    }
+//
+//    public static DamageAnimations getCurrentAnimation() {
+//        return currentAnimation;
+//    }
+//
+//    public static void cycleAnimation() {
+//        DamageAnimations[] animations = {
+//                DamageAnimations.FLOATING,
+//                DamageAnimations.PARTICLE,
+//                DamageAnimations.HYBRID,
+//                DamageAnimations.ARCH
+//        };
+//
+//        for (int i = 0; i < animations.length; i++) {
+//            if (currentAnimation == animations[i]) {
+//                currentAnimation = animations[(i + 1) % animations.length];
+//                return;
+//            }
+//        }
+//        currentAnimation = DamageAnimations.FLOATING;
+//    }
 
-    // Animation instances
-    public static final DamageAnimation FLOATING_ANIMATION = DamageAnimations.FLOATING_ANIMATION;
-    public static final DamageAnimation PARTICLE_ANIMATION = DamageAnimations.PARTICLE_ANIMATION;
-    public static final DamageAnimation HYBRID_ANIMATION = DamageAnimations.HYBRID_ANIMATION;
-    public static final DamageAnimation ARCH_ANIMATION = DamageAnimations.ARCH_ANIMATION;
-    public static final DamageAnimation NEW_ANIM = DamageAnimations.NEW_ANIM;
-    // Current animation
-    private static DamageAnimation currentAnimation = NEW_ANIM;
 
-    // Set animation
-    public static void setAnimation(DamageAnimation animation) {
-        currentAnimation = animation;
-    }
-
-    // Get current animation
-    public static DamageAnimation getCurrentAnimation() {
-        return currentAnimation;
-    }
-
-    // Cycle through animations
-    public static void cycleAnimation() {
-        DamageAnimation[] animations = {
-                FLOATING_ANIMATION,
-                PARTICLE_ANIMATION,
-                HYBRID_ANIMATION,
-                ARCH_ANIMATION
-        };
-
-        for (int i = 0; i < animations.length; i++) {
-            if (currentAnimation == animations[i]) {
-                currentAnimation = animations[(i + 1) % animations.length];
-                return;
-            }
-        }
-        currentAnimation = FLOATING_ANIMATION;
-    }
-
-    // Main render method
     public static void renderDamageIndicator(Entity entity, float damage) {
-        renderDamageIndicator(entity, damage, currentAnimation);
-    }
+        if(!ConfigGetter.iconfig.damageEnable) return;
+        if(!ConfigGetter.iconfig.enableIndicator) return;
 
-    // Render with specific animation
-    public static void renderDamageIndicator(Entity entity, float damage, DamageAnimation animation) {
-        Component styled = Component.literal(String.format("%.1f", damage))
-                .withStyle(ChatFormatting.RED);
+        String result = ConfigGetter.iconfig.damageFormat.replace("{dmg}", String.format("%." + ConfigGetter.iconfig.decimal + "f", damage));
+        Component component = ComponentUtilsParser.parseColorCodes(result);
 
         Random random = new Random();
-
-        // Start position
         double startX = entity.getX();
-        double startY = entity.getY() + entity.getBbHeight() * 0.7;
+        double startY = entity.getY() + entity.getBbHeight() * 0.85;
         double startZ = entity.getZ();
 
-        // Spawn position in radius 0.5-1.0 blocks
-        float radius = 0.5f + random.nextFloat() * 0.5f;
-        float randomAngle = random.nextFloat() * (float)Math.PI * 2;
-        float uniformRadius = (float)Math.sqrt(random.nextFloat()) * radius;
+        float radius = 0.2f + random.nextFloat() * 0.3f;
 
-        double spawnX = startX + Math.cos(randomAngle) * uniformRadius;
-        double spawnZ = startZ + Math.sin(randomAngle) * uniformRadius;
+        float u = random.nextFloat();
+        float v = random.nextFloat();
+        float theta = 2 * (float)Math.PI * u;
+        float phi = (float)Math.acos(2 * v - 1);
 
-        // Create hologram
-        Hologram holo = HologramAPI.create(styled, spawnX, startY, spawnZ)
-                .shadow(true)
-                .lifetime(30)
-                .scale(1f)
-                .renderOnTop(true);
+        double spawnX = startX + ConfigGetter.iconfig.damageoffset * (radius * Math.sin(phi) * Math.cos(theta) * 1.5);
+        double spawnY = startY + ConfigGetter.iconfig.damageoffset * (radius * Math.sin(phi) * Math.sin(theta));
+        double spawnZ = startZ + ConfigGetter.iconfig.damageoffset * (radius * Math.cos(phi));
 
-        // Apply animation
-        animation.apply(holo, random);
+        Hologram holo = HologramAPI.create(component, spawnX, spawnY, spawnZ)
+                .shadow(ConfigGetter.iconfig.shadow)
+                .lifetime(ConfigGetter.iconfig.damagelifetime)
+                .scale(ConfigGetter.iconfig.damagescale)
+                .renderOnTop(ConfigGetter.iconfig.renderInfront)
+                .renderDistance(ConfigGetter.iconfig.renderDistance);
+        ConfigGetter.iconfig.damageanimations.apply(holo, random);
     }
 
-    // Get animation name
-    public static String getAnimationName(DamageAnimation animation) {
-        if (animation == FLOATING_ANIMATION) return "Floating";
-        if (animation == PARTICLE_ANIMATION) return "Particle Style";
-        if (animation == HYBRID_ANIMATION) return "Hybrid";
-        if (animation == ARCH_ANIMATION) return "Arc";
-        return "Unknown";
+    public static void renderHealingIndicator(Entity entity, float heal) {
+        if(!ConfigGetter.iconfig.healEnable) return;
+        if(!ConfigGetter.iconfig.enableIndicator) return;
+
+        String result = ConfigGetter.iconfig.healFormat.replace("{heal}", String.format("%." + ConfigGetter.iconfig.decimal + "f", heal));
+        Component component = ComponentUtilsParser.parseColorCodes(result);
+
+        Random random = new Random();
+        double startX = entity.getX();
+        double startY = entity.getY() + entity.getBbHeight() * 0.85;
+        double startZ = entity.getZ();
+
+        float radius = 0.2f + random.nextFloat() * 0.3f;
+
+        float u = random.nextFloat();
+        float v = random.nextFloat();
+        float theta = 2 * (float)Math.PI * u;
+        float phi = (float)Math.acos(2 * v - 1);
+
+        double spawnX = startX + ConfigGetter.iconfig.healoffset * (radius * Math.sin(phi) * Math.cos(theta) * 1.5);
+        double spawnY = startY + ConfigGetter.iconfig.healoffset * (radius * Math.sin(phi) * Math.sin(theta));
+        double spawnZ = startZ + ConfigGetter.iconfig.healoffset * (radius * Math.cos(phi));
+
+        Hologram holo = HologramAPI.create(component, spawnX, spawnY, spawnZ)
+                .shadow(ConfigGetter.iconfig.shadow)
+                .lifetime(ConfigGetter.iconfig.heallifetime)
+                .scale(ConfigGetter.iconfig.healscale)
+                .renderOnTop(ConfigGetter.iconfig.renderInfront)
+                .renderDistance(ConfigGetter.iconfig.renderDistance);
+        ConfigGetter.iconfig.healanimations.apply(holo, random);
     }
 }

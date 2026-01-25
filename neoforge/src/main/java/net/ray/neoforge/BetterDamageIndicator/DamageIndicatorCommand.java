@@ -10,7 +10,7 @@ import net.minecraft.network.chat.Component;
 import net.neoforged.neoforge.client.event.RegisterClientCommandsEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.ray.BetterDamageIndicator.config.DamageConfig;
+import net.ray.BetterDamageIndicator.config.IndicatorConfig;
 
 import java.util.function.Supplier;
 
@@ -30,7 +30,7 @@ public class DamageIndicatorCommand {
                     client.tell(() -> {
                         try {
                             Supplier<Screen> screenSupplier = AutoConfig.getConfigScreen(
-                                    DamageConfig.class,
+                                    IndicatorConfig.class,
                                     client.screen
                             );
                             Screen configScreen = screenSupplier.get();

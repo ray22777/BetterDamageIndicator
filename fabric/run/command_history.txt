@@ -24,3 +24,4 @@
 /hologram
 /hologram config
 /damageconfig
+/damageindicator

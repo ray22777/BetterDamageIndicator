@@ -3,20 +3,30 @@ package net.ray.BetterDamageIndicator;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.decoration.ArmorStand;
+import net.minecraft.world.entity.player.Player;
+import net.ray.BetterDamageIndicator.config.ConfigGetter;
 
 import java.util.Iterator;
+import java.util.Objects;
 
 public class DamageTracker {
+    public enum DAMAGE_SOURCE {
+        SELF,
+        PLAYER,
+        ALL
+    }
+
     private static final Int2ObjectMap<EntityData> ENTITY_DATA = new Int2ObjectOpenHashMap<>();
     private static final Minecraft CLIENT = Minecraft.getInstance();
-    private static int cleanupCounter = 0;
 
     private static class EntityData {
         float lastHealth;
         float lastMaxHealth;
         float damageToShow;
+        float healingToShow;
         int showTicks;
         int lastSeenTick;
         boolean wasAlive;
@@ -35,6 +45,7 @@ public class DamageTracker {
             float currentHealth = entity.getHealth();
             float maxHealth = entity.getMaxHealth();
 
+
             if (maxHealth > lastMaxHealth) {
                 lastHealth = currentHealth;
                 lastMaxHealth = maxHealth;
@@ -45,17 +56,37 @@ public class DamageTracker {
 
                 if (rawDamage > 0) {
                     damageToShow = rawDamage;
-                    DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                    switch(ConfigGetter.iconfig.damageSource){
+                        case ALL:
+                            DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                            break;
+                        case PLAYER:
+                            if(Objects.requireNonNull(entity.getLastDamageSource()).getEntity() instanceof Player){
+                                DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                            }
+                            break;
+                        case SELF:
+                            if(Objects.requireNonNull(entity.getLastDamageSource()).getEntity() instanceof LocalPlayer){
+                                DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                            }
+                            break;
+                    }
                 }
-
-                lastHealth = currentHealth;
-            } else if (currentHealth > lastHealth) {
-                lastHealth = currentHealth;
+                showTicks = 40;
             }
+            else if (currentHealth > lastHealth) {
+                float rawHealing = currentHealth - lastHealth;
+
+                if (rawHealing > 0) {
+                    healingToShow = rawHealing;
+                    DamageRenderer.renderHealingIndicator(entity, rawHealing);
+                }
+                showTicks = 40;
+            }
+            lastHealth = currentHealth;
 
             wasAlive = isAlive;
 
-            // Count down display timer
             if (showTicks > 0) {
                 showTicks--;
             }
@@ -88,14 +119,6 @@ public class DamageTracker {
         return entity.distanceTo(CLIENT.player) <= 64;
     }
 
-    public static void tick() {
-        cleanupCounter++;
-
-        if (cleanupCounter >= 100) {
-            cleanupCounter = 0;
-            cleanupStaleEntries();
-        }
-    }
 
     private static void cleanupStaleEntries() {
         int currentTick = getCurrentTick();
@@ -111,15 +134,6 @@ public class DamageTracker {
         }
     }
 
-    public static float getDamageToShow(LivingEntity entity) {
-        EntityData data = ENTITY_DATA.get(entity.getId());
-        return data != null && data.showTicks > 0 ? data.damageToShow : 0;
-    }
-
-    public static int getShowTicks(LivingEntity entity) {
-        EntityData data = ENTITY_DATA.get(entity.getId());
-        return data != null ? data.showTicks : 0;
-    }
 
     private static int getCurrentTick() {
         return CLIENT.player != null ? CLIENT.player.tickCount : 0;

@@ -9,7 +9,7 @@ import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.ray.BetterDamageIndicator.config.DamageConfig;
+import net.ray.BetterDamageIndicator.config.IndicatorConfig;
 
 import java.util.function.Supplier;
 
@@ -24,7 +24,7 @@ public class DamageIndicatorCommand {
                     client.tell(() -> {
                         try {
                             Supplier<Screen> screenSupplier = AutoConfig.getConfigScreen(
-                                    DamageConfig.class,
+                                    IndicatorConfig.class,
                                     client.screen
                             );
                             Screen configScreen = screenSupplier.get();

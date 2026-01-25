@@ -5,7 +5,8 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 
-import net.ray.BetterDamageIndicator.config.DamageConfig;
+import net.ray.BetterDamageIndicator.config.ConfigGetter;
+import net.ray.BetterDamageIndicator.config.IndicatorConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,8 +16,8 @@ public class BetterDamageIndicator implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        AutoConfig.register(DamageConfig.class, GsonConfigSerializer::new);
+        AutoConfig.register(IndicatorConfig.class, GsonConfigSerializer::new);
+        ConfigGetter.iconfig = AutoConfig.getConfigHolder(IndicatorConfig.class).getConfig();
     }
-
 
 }
