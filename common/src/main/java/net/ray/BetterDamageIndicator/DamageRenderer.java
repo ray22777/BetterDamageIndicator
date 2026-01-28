@@ -1,13 +1,8 @@
 package net.ray.BetterDamageIndicator;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.ComponentUtils;
-import net.minecraft.network.chat.FormattedText;
 import net.minecraft.world.entity.Entity;
-import net.ray.BetterDamageIndicator.animation.DamageAnimations;
 import net.ray.BetterDamageIndicator.config.ConfigGetter;
-import net.ray.BetterDamageIndicator.config.IndicatorConfig;
 import net.ray.HologramAPI.Hologram;
 import net.ray.HologramAPI.HologramAPI;
 import java.util.Random;

@@ -11,7 +11,7 @@ authors = "Me!"
 description = '''
 This is an example description! Tell everyone what your mod is about!
 '''
-#logoFile = ""
+logoFile = "assets/better_damage_indicator/icon.png"
 
 [[dependencies.better_damage_indicator]]
 modId = "neoforge"

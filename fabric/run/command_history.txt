@@ -25,3 +25,12 @@
 /hologram config
 /damageconfig
 /damageindicator
+/hologram create 232342 2 2 2 true
+/hologram create 232342 2 80 2
+/hologram create 232342 -189 183 57
+/damageindicator
+/effect give @a minecraft:night_vision
+/time set day
+/hologram create "&c-10.0" -189 183 57
+/hologram create "&c-10.0" 0 72 29.5
+/damageindicator

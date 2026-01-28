@@ -27,7 +27,7 @@ public class DamageIndicatorCommand {
                     Minecraft client = Minecraft.getInstance();
                     if (client.level == null) return 0;
 
-                    client.tell(() -> {
+                    client.execute(() -> {
                         try {
                             Supplier<Screen> screenSupplier = AutoConfig.getConfigScreen(
                                     IndicatorConfig.class,

@@ -5,21 +5,21 @@
   "text.autoconfig.better-damage-indicator.category.healing": "Healing",
 
   "text.autoconfig.better-damage-indicator.option.enableIndicator": "Enable Mod",
-  "text.autoconfig.better-damage-indicator.option.enableIndicator.@Tooltip[0]": "Enable health indicators",
+  "text.autoconfig.better-damage-indicator.option.enableIndicator.@Tooltip": "Enable health indicators",
 
   "text.autoconfig.better-damage-indicator.option.renderInfront": "Render On Top",
   "text.autoconfig.better-damage-indicator.option.renderInfront.@Tooltip[0]": "Renders the damage indicator over everything.",
   "text.autoconfig.better-damage-indicator.option.renderInfront.@Tooltip[1]": "Eg. damage indicator is drawn on top of entities and blocks",
 
   "text.autoconfig.better-damage-indicator.option.shadow": "Shadow",
-  "text.autoconfig.better-damage-indicator.option.shadow.@Tooltip[0]": "Enables text shadow",
+  "text.autoconfig.better-damage-indicator.option.shadow.@Tooltip": "Enables text shadow",
 
   "text.autoconfig.better-damage-indicator.option.renderDistance": "Render Distance",
   "text.autoconfig.better-damage-indicator.option.renderDistance.@Tooltip[0]": "Changes how far damage indicators will be shown",
   "text.autoconfig.better-damage-indicator.option.renderDistance.@Tooltip[1]": "Maximum distance in blocks to display indicators",
 
   "text.autoconfig.better-damage-indicator.option.decimal": "Decimal Places",
-  "text.autoconfig.better-damage-indicator.option.decimal.@Tooltip[0]": "How many trailing decimals to show",
+  "text.autoconfig.better-damage-indicator.option.decimal.@Tooltip": "How many trailing decimals to show",
 
   "text.autoconfig.better-damage-indicator.option.damageEnable": "Enable Damage Indicator",
   "text.autoconfig.better-damage-indicator.option.damageEnable.@Tooltip[0]": "Enable damage indicator",
@@ -48,7 +48,7 @@
   "text.autoconfig.better-damage-indicator.option.damageoffset.@Tooltip[1]": "Higher values spread indicators further from entity center",
 
   "text.autoconfig.better-damage-indicator.option.damagescale": "Damage Scale",
-  "text.autoconfig.better-damage-indicator.option.damagescale.@Tooltip[0]": "How big the damage indicator will be",
+  "text.autoconfig.better-damage-indicator.option.damagescale.@Tooltip": "How big the damage indicator will be",
 
   "text.autoconfig.better-damage-indicator.option.healEnable": "Enable Healing Indicator",
   "text.autoconfig.better-damage-indicator.option.healEnable.@Tooltip[0]": "Enable healing indicator",
@@ -72,6 +72,6 @@
   "text.autoconfig.better-damage-indicator.option.healoffset.@Tooltip[1]": "Higher values spread indicators further from entity center",
 
   "text.autoconfig.better-damage-indicator.option.healscale": "Healing Scale",
-  "text.autoconfig.better-damage-indicator.option.healscale.@Tooltip[0]": "How big the healing indicator will be"
+  "text.autoconfig.better-damage-indicator.option.healscale.@Tooltip": "How big the healing indicator will be"
 
 }

@@ -3,7 +3,7 @@ package net.ray.fabric.BetterDamageIndicator.client;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 
-public final class ExampleModFabricClient implements ClientModInitializer {
+public final class BetterDamageIndicatorClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 //        // Update damage timers
