@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "better_damage_indicator",
+  "version": "1.0.0",
+  "name": "Better Damage Indicator",
+  "description": "Add client-sided, customizable and animated damage indicators when entities take damage/heal. ",
+  "authors": [
+    "ray"
+  ],
+  "contact": {
+    "sources": "https://github.com/ray22777/BetterDamageIndicator"
+  },
+  "license": "MIT",
+  "icon": "assets/better_damage_indicator/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.ray.fabric.BetterDamageIndicator.BetterDamageIndicator"
+    ],
+    "client": [
+      "net.ray.fabric.BetterDamageIndicator.client.BetterDamageIndicatorClient"
+    ],
+    "modmenu": [
+      "net.ray.fabric.BetterDamageIndicator.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "better_damage_indicator.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": ">=1.20",
+    "java": "*",
+    "fabric-api": "*",
+    "cloth-config": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

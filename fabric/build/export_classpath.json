@@ -1,0 +1,18 @@
+{
+  "projectPath": ":fabric",
+  "classpaths": {
+    "test": [
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\build\\classes\\java\\test",
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\build\\resources\\test",
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\out\\test\\classes",
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\out\\test\\resources"
+    ],
+    "main": [
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\build\\classes\\java\\main",
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\build\\resources\\main",
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\build\\devlibs\\better_damage_indicator-fabric-1.0.0-dev.jar",
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\out\\production\\classes",
+      "C:\\Users\\Ray\\Documents\\ModDevNew\\Better Damage Indicator\\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\\fabric\\out\\production\\resources"
+    ]
+  }
+}

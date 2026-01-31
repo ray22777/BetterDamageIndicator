@@ -1,0 +1,20 @@
+{
+  "enableIndicator": true,
+  "renderInfront": true,
+  "shadow": true,
+  "renderDistance": 30,
+  "decimal": 1,
+  "damageEnable": true,
+  "damageSource": "ALL",
+  "damageFormat": "§c-{dmg}",
+  "damageanimations": "ZOOM_OUT",
+  "damagelifetime": 30,
+  "damageoffset": 1.0,
+  "damagescale": 1.0,
+  "healEnable": true,
+  "healFormat": "§a+{heal}",
+  "healanimations": "RISE",
+  "heallifetime": 30,
+  "healoffset": 1.0,
+  "healscale": 1.0
+}

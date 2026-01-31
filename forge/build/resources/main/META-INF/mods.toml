@@ -1,0 +1,43 @@
+modLoader = "javafml"
+loaderVersion = "[34,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "better_damage_indicator"
+version = "1.0.0"
+displayName = "Better Damage INdicator"
+authors = "ray"
+description = '''
+Add client-sided, customizable and animated damage indicators when entities take damage/heal.
+'''
+logoFile = "assets/better_damage_indicator/icon.png"
+
+
+[[dependencies.better_damage_indicator]]
+modId = "forge"
+mandatory = true
+versionRange = "[34,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.better_damage_indicator]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.better_damage_indicator]]
+modId = "cloth_config"
+type = "required"
+versionRange = "[11.1.118,)"
+ordering = "NONE"
+side = "CLIENT"
+mandatory = true
+[[dependencies.better_damage_indicator]]
+modId = "hologram_api"
+type = "required"
+versionRange = "[1.0.0,)"
+ordering = "NONE"
+side = "CLIENT"
+mandatory = true

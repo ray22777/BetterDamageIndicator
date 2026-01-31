@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "net/ray/BetterDamageIndicator/mixin/HealthBarMixin": {
+      "baseTick": "Lnet/minecraft/class_1309;method_5670()V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/ray/BetterDamageIndicator/mixin/HealthBarMixin": {
+        "baseTick": "Lnet/minecraft/class_1309;method_5670()V"
+      }
+    }
+  }
+}

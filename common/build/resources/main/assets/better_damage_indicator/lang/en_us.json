@@ -1,0 +1,77 @@
+{
+  "text.autoconfig.better-damage-indicator.title": "Better Damage Indicator",
+  "text.autoconfig.better-damage-indicator.category.general": "General",
+  "text.autoconfig.better-damage-indicator.category.damage": "Damage",
+  "text.autoconfig.better-damage-indicator.category.healing": "Healing",
+
+  "text.autoconfig.better-damage-indicator.option.enableIndicator": "Enable Mod",
+  "text.autoconfig.better-damage-indicator.option.enableIndicator.@Tooltip": "Enable health indicators",
+
+  "text.autoconfig.better-damage-indicator.option.renderInfront": "Render On Top",
+  "text.autoconfig.better-damage-indicator.option.renderInfront.@Tooltip[0]": "Renders the damage indicator over everything.",
+  "text.autoconfig.better-damage-indicator.option.renderInfront.@Tooltip[1]": "Eg. damage indicator is drawn on top of entities and blocks",
+
+  "text.autoconfig.better-damage-indicator.option.shadow": "Shadow",
+  "text.autoconfig.better-damage-indicator.option.shadow.@Tooltip": "Enables text shadow",
+
+  "text.autoconfig.better-damage-indicator.option.renderDistance": "Render Distance",
+  "text.autoconfig.better-damage-indicator.option.renderDistance.@Tooltip[0]": "Changes how far damage indicators will be shown",
+  "text.autoconfig.better-damage-indicator.option.renderDistance.@Tooltip[1]": "Maximum distance in blocks to display indicators",
+
+  "text.autoconfig.better-damage-indicator.option.decimal": "Decimal Places",
+  "text.autoconfig.better-damage-indicator.option.decimal.@Tooltip": "How many trailing decimals to show",
+
+  "text.autoconfig.better-damage-indicator.option.damageEnable": "Enable Damage Indicator",
+  "text.autoconfig.better-damage-indicator.option.damageEnable.@Tooltip[0]": "Enable damage indicator",
+  "text.autoconfig.better-damage-indicator.option.damageEnable.@Tooltip[1]": "Show damage numbers when entities take damage",
+
+  "text.autoconfig.better-damage-indicator.option.damageSource": "Damage Source Filter",
+  "text.autoconfig.better-damage-indicator.option.damageSource.@Tooltip[0]": "Filter which damage sources to show",
+  "text.autoconfig.better-damage-indicator.option.damageSource.@Tooltip[1]": "ALL: Show all damage | PLAYER: Only player damage | SELF: Only your damage",
+
+  "text.autoconfig.better-damage-indicator.option.damageFormat": "Damage Format",
+  "text.autoconfig.better-damage-indicator.option.damageFormat.@Tooltip[0]": "Formatting for damage text",
+  "text.autoconfig.better-damage-indicator.option.damageFormat.@Tooltip[1]": "Supports Minecraft color codes.",
+  "text.autoconfig.better-damage-indicator.option.damageFormat.@Tooltip[2]": "Use {dmg} as damage placeholder",
+
+
+  "text.autoconfig.better-damage-indicator.option.damageanimations": "Damage Animation",
+  "text.autoconfig.better-damage-indicator.option.damageanimations.@Tooltip[0]": "Animation style for damage indicators",
+  "text.autoconfig.better-damage-indicator.option.damageanimations.@Tooltip[1]": "Choose how damage numbers appear and move",
+
+  "text.autoconfig.better-damage-indicator.option.damagelifetime": "Damage Lifetime",
+  "text.autoconfig.better-damage-indicator.option.damagelifetime.@Tooltip[0]": "How long the indicator will last",
+  "text.autoconfig.better-damage-indicator.option.damagelifetime.@Tooltip[1]": "In ticks (20 ticks = 1 second)",
+
+  "text.autoconfig.better-damage-indicator.option.damageoffset": "Damage Offset",
+  "text.autoconfig.better-damage-indicator.option.damageoffset.@Tooltip[0]": "Adjust offset around the entity",
+  "text.autoconfig.better-damage-indicator.option.damageoffset.@Tooltip[1]": "Higher values spread indicators further from entity center",
+
+  "text.autoconfig.better-damage-indicator.option.damagescale": "Damage Scale",
+  "text.autoconfig.better-damage-indicator.option.damagescale.@Tooltip": "How big the damage indicator will be",
+
+  "text.autoconfig.better-damage-indicator.option.healEnable": "Enable Healing Indicator",
+  "text.autoconfig.better-damage-indicator.option.healEnable.@Tooltip[0]": "Enable healing indicator",
+  "text.autoconfig.better-damage-indicator.option.healEnable.@Tooltip[1]": "Show healing numbers when entities recover health",
+
+  "text.autoconfig.better-damage-indicator.option.healFormat": "Healing Format",
+  "text.autoconfig.better-damage-indicator.option.healFormat.@Tooltip[0]": "Formatting for healing text",
+  "text.autoconfig.better-damage-indicator.option.healFormat.@Tooltip[1]": "Supports Minecraft color codes.",
+  "text.autoconfig.better-damage-indicator.option.healFormat.@Tooltip[2]": "Use {heal} as healing placeholder",
+
+  "text.autoconfig.better-damage-indicator.option.healanimations": "Healing Animation",
+  "text.autoconfig.better-damage-indicator.option.healanimations.@Tooltip[0]": "Animation style for healing indicators",
+  "text.autoconfig.better-damage-indicator.option.healanimations.@Tooltip[1]": "Choose how healing numbers appear and move",
+
+  "text.autoconfig.better-damage-indicator.option.heallifetime": "Healing Lifetime",
+  "text.autoconfig.better-damage-indicator.option.heallifetime.@Tooltip[0]": "How long the indicator will last",
+  "text.autoconfig.better-damage-indicator.option.heallifetime.@Tooltip[1]": "In ticks (20 ticks = 1 second)",
+
+  "text.autoconfig.better-damage-indicator.option.healoffset": "Healing Offset",
+  "text.autoconfig.better-damage-indicator.option.healoffset.@Tooltip[0]": "Adjust offset around the entity",
+  "text.autoconfig.better-damage-indicator.option.healoffset.@Tooltip[1]": "Higher values spread indicators further from entity center",
+
+  "text.autoconfig.better-damage-indicator.option.healscale": "Healing Scale",
+  "text.autoconfig.better-damage-indicator.option.healscale.@Tooltip": "How big the healing indicator will be"
+
+}

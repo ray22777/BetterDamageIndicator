@@ -1,0 +1,9 @@
+architectury {
+    common rootProject.enabled_platforms.split(',')
+}
+
+dependencies {
+    modApi "me.shedaniel.cloth:cloth-config-forge:11.1.136"
+    modApi files("C:\\Users\\Ray\\Documents\\ModDevNew\\HologramAPI Mod FIles\\hologram_api-forge-1.0.0 1.20.1.jar")
+    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+}
