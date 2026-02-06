@@ -50,7 +50,8 @@
   "text.autoconfig.better-damage-indicator.option.damagescale": "Damage Scale",
   "text.autoconfig.better-damage-indicator.option.damagescale.@Tooltip": "How big the damage indicator will be",
 
-
+  "text.autoconfig.better-damage-indicator.option.disableSelf": "Disable Self",
+  "text.autoconfig.better-damage-indicator.option.disableSelf.@Tooltip": "Stop damage taken by yourself from rendering.",
 
   "text.autoconfig.better-damage-indicator.option.healEnable": "Enable Healing Indicator",
   "text.autoconfig.better-damage-indicator.option.healEnable.@Tooltip[0]": "Enable healing indicator",

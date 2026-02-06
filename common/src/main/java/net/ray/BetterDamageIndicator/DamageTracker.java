@@ -45,7 +45,7 @@ public class DamageTracker {
             float currentHealth = entity.getHealth();
             float maxHealth = entity.getMaxHealth();
 
-
+            var lastDamageSource = entity.getLastDamageSource();
             if (maxHealth > lastMaxHealth) {
                 lastHealth = currentHealth;
                 lastMaxHealth = maxHealth;
@@ -61,13 +61,17 @@ public class DamageTracker {
                             DamageRenderer.renderDamageIndicator(entity, rawDamage);
                             break;
                         case PLAYER:
-                            if(Objects.requireNonNull(entity.getLastDamageSource()).getEntity() instanceof Player){
-                                DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                            if(lastDamageSource != null ) {
+                                if (lastDamageSource.getEntity() instanceof Player) {
+                                    DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                                }
                             }
                             break;
                         case SELF:
-                            if(Objects.requireNonNull(entity.getLastDamageSource()).getEntity() instanceof LocalPlayer){
-                                DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                            if(lastDamageSource != null ){
+                                if(lastDamageSource.getEntity() instanceof LocalPlayer){
+                                    DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                                }
                             }
                             break;
                     }
