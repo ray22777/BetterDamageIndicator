@@ -1,14 +1,3 @@
-/summon minecraft:zombie
-/gamerule random_tick_speed 3
-/gamemode adventure
-/gamemode creative
-/summon minecraft:zombie
-/gamemode creative
-/tp @a 45 67 25
-/tp @a 0 64 0
-/tp @a 0 80 0
-/tp @a 0 70 0
-/summon minecraft:zombie
 /gamemode creative
 /setworldspawn
 /time set day
@@ -47,4 +36,15 @@
 /summon minecraft:zombie
 /gamemode creative
 /summon minecraft:zombie
+/damageindicator
+/summon minecraft:zombie
+/damageindicator
+/gamemode survival
+/damageindicator
+/effect give @a minecraft:saturation 100
+/tp @a 0 80 0
+/gamemode creative
+/tp @a 0 100 0
+/gamemode survival
+/effect give @a minecraft:saturation infinite
 /damageindicator

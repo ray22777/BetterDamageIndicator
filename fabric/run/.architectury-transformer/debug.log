@@ -1,5 +1,5 @@
 [Architectury Transformer] Architectury Runtime 5.2.87
-[Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.0.0-dev.jar
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.1.0-dev.jar
 [Architectury Transformer DEBUG] Preparing tiny remapper prepared transformer: dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Provided 113 classpath jar(s):
 [Architectury Transformer DEBUG]  - C:\Users\Ray\.gradle\caches\modules-2\files-2.1\dev.architectury\architectury-injectables\1.0.10\62db2a366d662606d1b23ad02ccc3212ed37ec3\architectury-injectables-1.0.10.jar
@@ -115,15 +115,15 @@
 [Architectury Transformer DEBUG]  - C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\.gradle\loom-cache\remapped_mods\remapped\me\shedaniel\cloth\basic-math-b9d2d3ba\0.6.1\basic-math-b9d2d3ba-0.6.1.jar
 [Architectury Transformer DEBUG]  - C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\.gradle\loom-cache\remapped_mods\remapped\unspecified\hologram_api-fabric-1.1.0 1.21.1-b9d2d3ba\6f5951dda0\hologram_api-fabric-1.1.0 1.21.1-b9d2d3ba-6f5951dda0.jar
 [Architectury Transformer DEBUG]  - C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\.gradle\loom-cache\remapped_mods\remapped\com\terraformersmc\modmenu-b9d2d3ba\11.0.3\modmenu-b9d2d3ba-11.0.3.jar
-[Architectury Transformer] Read classpath in 1.410 s
-[Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.0.0-dev.jar
-[Architectury Transformer DEBUG] Transforming 5 transformer(s) from C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.0.0-dev.jar to C:\Users\Ray\AppData\Local\Temp\1297133670058390659.jar: 
+[Architectury Transformer] Read classpath in 1.969 s
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.1.0-dev.jar
+[Architectury Transformer DEBUG] Transforming 5 transformer(s) from C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.1.0-dev.jar to C:\Users\Ray\AppData\Local\Temp\2931867371007932845.jar: 
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RuntimeMixinRefmapDetector@8e24743
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.GenerateFakeFabricMod@74a10858
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@23fe1d71
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@28ac3dc3
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@32eebfca
-[Architectury Transformer DEBUG] Transforming from C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.0.0-dev.jar to C:\Users\Ray\AppData\Local\Temp\1297133670058390659.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG] Transforming from C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.1.0-dev.jar to C:\Users\Ray\AppData\Local\Temp\2931867371007932845.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/animation/DamageAnimations$1 with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/animation/DamageAnimations$2 with maxs=true frames=true
@@ -140,56 +140,56 @@
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/mixin/CritMixin with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/mixin/HealthBarMixin with maxs=true frames=true
 [Architectury Transformer DEBUG] Checking whether /better_damage_indicator.mixins.json is a mixin config.
-[Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\AppData\Local\Temp\1297133670058390659.jar
-[Architectury Transformer] Listening at C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.0.0-dev.jar
-[Architectury Transformer DEBUG] Temporary jar [C:\Users\Ray\AppData\Local\Temp\1297133670058390659.jar] contains packages: net.ray.BetterDamageIndicator.mixin, net.ray.BetterDamageIndicator, net.ray.BetterDamageIndicator.animation, net.ray.BetterDamageIndicator.config
-[Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.0.0-dev.jar
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\AppData\Local\Temp\2931867371007932845.jar
+[Architectury Transformer] Listening at C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.1.0-dev.jar
+[Architectury Transformer DEBUG] Temporary jar [C:\Users\Ray\AppData\Local\Temp\2931867371007932845.jar] contains packages: net.ray.BetterDamageIndicator.mixin, net.ray.BetterDamageIndicator, net.ray.BetterDamageIndicator.animation, net.ray.BetterDamageIndicator.config
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\common\build\devlibs\better_damage_indicator-common-1.1.0-dev.jar
 [Architectury Transformer DEBUG] Classpath entry [C:\Users\Ray\Documents\MC Mod Development\Better Damage Indicator\Source\better_damage_indicator-1.21.10-fabric-neoforge-template (1)\fabric\build\resources\main] contains packages: 
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/config/IndicatorConfig.class to net/ray/BetterDamageIndicator/config/IndicatorConfig.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/config/IndicatorConfig with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/config/IndicatorConfig in 1.829 ms
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/config/IndicatorConfig in 2.689 ms
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/DamageTracker$DAMAGE_SOURCE.class to net/ray/BetterDamageIndicator/DamageTracker$DAMAGE_SOURCE.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/DamageTracker$DAMAGE_SOURCE with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageTracker$DAMAGE_SOURCE in 637.3 μs
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageTracker$DAMAGE_SOURCE in 682.2 μs
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/animation/DamageAnimations.class to net/ray/BetterDamageIndicator/animation/DamageAnimations.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/animation/DamageAnimations with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations in 560.3 μs
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations in 455.5 μs
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/animation/DamageAnimations$1.class to net/ray/BetterDamageIndicator/animation/DamageAnimations$1.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/animation/DamageAnimations$1 with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations$1 in 785.3 μs
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations$1 in 587.1 μs
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/animation/DamageAnimations$2.class to net/ray/BetterDamageIndicator/animation/DamageAnimations$2.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/animation/DamageAnimations$2 with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations$2 in 623.1 μs
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations$2 in 820.8 μs
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/animation/DamageAnimations$3.class to net/ray/BetterDamageIndicator/animation/DamageAnimations$3.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/animation/DamageAnimations$3 with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations$3 in 1.236 ms
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations$3 in 711.0 μs
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/animation/DamageAnimations$4.class to net/ray/BetterDamageIndicator/animation/DamageAnimations$4.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/animation/DamageAnimations$4 with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations$4 in 1.615 ms
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/animation/DamageAnimations$4 in 1.154 ms
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/config/ConfigGetter.class to net/ray/BetterDamageIndicator/config/ConfigGetter.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/config/ConfigGetter with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/config/ConfigGetter in 554.7 μs
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/config/ConfigGetter in 892.8 μs
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/DamageTracker.class to net/ray/BetterDamageIndicator/DamageTracker.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/DamageTracker with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageTracker in 1.675 ms
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageTracker in 1.337 ms
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/DamageTracker$EntityData.class to net/ray/BetterDamageIndicator/DamageTracker$EntityData.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/DamageTracker$EntityData with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageTracker$EntityData in 1.343 ms
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageTracker$EntityData in 1.225 ms
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/DamageRenderer.class to net/ray/BetterDamageIndicator/DamageRenderer.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/DamageRenderer with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageRenderer in 1.831 ms
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/DamageRenderer in 1.927 ms
 [Architectury Transformer DEBUG] Transforming from net/ray/BetterDamageIndicator/ComponentUtilsParser.class to net/ray/BetterDamageIndicator/ComponentUtilsParser.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing net/ray/BetterDamageIndicator/ComponentUtilsParser with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/ComponentUtilsParser in 896.6 μs
+[Architectury Transformer DEBUG] Transformed net/ray/BetterDamageIndicator/ComponentUtilsParser in 962.9 μs
