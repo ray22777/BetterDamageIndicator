@@ -34,6 +34,11 @@
   "text.autoconfig.better-damage-indicator.option.damageFormat.@Tooltip[1]": "Supports Minecraft color codes.",
   "text.autoconfig.better-damage-indicator.option.damageFormat.@Tooltip[2]": "Use {dmg} as damage placeholder",
 
+  "text.autoconfig.better-damage-indicator.option.critDamageFormat": "Crit Hit Format",
+  "text.autoconfig.better-damage-indicator.option.critDamageFormat.@Tooltip[0]": "Formatting for critical hits",
+  "text.autoconfig.better-damage-indicator.option.critDamageFormat.@Tooltip[1]": "Supports Minecraft color codes.",
+  "text.autoconfig.better-damage-indicator.option.critDamageFormat.@Tooltip[2]": "Use {dmg} as damage placeholder",
+
 
   "text.autoconfig.better-damage-indicator.option.damageanimations": "Damage Animation",
   "text.autoconfig.better-damage-indicator.option.damageanimations.@Tooltip[0]": "Animation style for damage indicators",
@@ -50,8 +55,8 @@
   "text.autoconfig.better-damage-indicator.option.damagescale": "Damage Scale",
   "text.autoconfig.better-damage-indicator.option.damagescale.@Tooltip": "How big the damage indicator will be",
 
-  "text.autoconfig.better-damage-indicator.option.disableSelf": "Disable Self",
-  "text.autoconfig.better-damage-indicator.option.disableSelf.@Tooltip": "Stop damage taken by yourself from rendering.",
+  "text.autoconfig.better-damage-indicator.option.disableSelf": "Disable Self Indicator",
+  "text.autoconfig.better-damage-indicator.option.disableSelf.@Tooltip": "Stop indicators for both damage/healing for yourself from rendering.",
 
   "text.autoconfig.better-damage-indicator.option.healEnable": "Enable Healing Indicator",
   "text.autoconfig.better-damage-indicator.option.healEnable.@Tooltip[0]": "Enable healing indicator",
