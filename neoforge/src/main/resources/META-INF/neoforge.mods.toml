@@ -7,9 +7,9 @@ license = "Insert License Here"
 modId = "better_damage_indicator"
 version = "${version}"
 displayName = "Better Damage INdicator"
-authors = "Me!"
+authors = "ray"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Add client-sided, customizable and animated damage indicators when entities take damage/heal.
 '''
 logoFile = "assets/better_damage_indicator/icon.png"
 
@@ -37,7 +37,7 @@ modId = "hologram_api"
 type = "required"
 versionRange = "[1.0.0,)"
 ordering = "NONE"
-side = "BOTH"
+side = "CLIENT"
 
 [[mixins]]
 config = "better_damage_indicator.mixins.json"

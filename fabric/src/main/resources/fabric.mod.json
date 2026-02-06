@@ -32,7 +32,8 @@
     "minecraft": ">=1.20",
     "java": ">=21",
     "fabric-api": "*",
-    "cloth-config": "*"
+    "cloth-config": "*",
+    "hologram_api": "*"
   },
   "suggests": {
     "modmenu": "*"
