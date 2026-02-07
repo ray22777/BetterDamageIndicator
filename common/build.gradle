@@ -3,8 +3,7 @@ architectury {
 }
 
 dependencies {
-    modApi "com.github.ray22777:hologram-api:fabric-1.21.1"
     modApi "me.shedaniel.cloth:cloth-config-fabric:15.0.140"
-    modCompileOnly "com.terraformersmc:modmenu:11.0.3"
+    modApi files("C:\\Users\\Ray\\Documents\\ModDevNew\\HologramAPI Mod FIles\\hologram_api-fabric-1.0.0 1.21.1.jar")
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 }
