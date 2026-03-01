@@ -21,7 +21,25 @@ public class DamageTracker {
 
     private static final Int2ObjectMap<EntityData> ENTITY_DATA = new Int2ObjectOpenHashMap<>();
     private static final Minecraft CLIENT = Minecraft.getInstance();
+    private static final Int2ObjectMap<Boolean> CRITICAL_HITS = new Int2ObjectOpenHashMap<>();
+    private static final Int2ObjectMap<Long> CRITICAL_HIT_TIMESTAMPS = new Int2ObjectOpenHashMap<>();
 
+    public static void markCriticalHit(int entityId) {
+        CRITICAL_HITS.put(entityId, Boolean.TRUE);
+        CRITICAL_HIT_TIMESTAMPS.put(entityId, Long.valueOf(System.currentTimeMillis()));
+    }
+    public static void clearAllCriticalHits() {
+        CRITICAL_HITS.clear();
+        CRITICAL_HIT_TIMESTAMPS.clear();
+    }
+
+    public static boolean isCriticalHit(int entityId) {
+        Boolean isCrit = CRITICAL_HITS.get(entityId);
+        if (isCrit != null && isCrit) {
+            return true;
+        }
+        return false;
+    }
     private static class EntityData {
         float lastHealth;
         float lastMaxHealth;
@@ -44,8 +62,8 @@ public class DamageTracker {
             boolean isAlive = entity.isAlive();
             float currentHealth = entity.getHealth();
             float maxHealth = entity.getMaxHealth();
-
-
+            boolean isCritical = isCriticalHit(entity.getId());
+            var lastDamageSource = entity.getLastDamageSource();
             if (maxHealth > lastMaxHealth) {
                 lastHealth = currentHealth;
                 lastMaxHealth = maxHealth;
@@ -58,20 +76,26 @@ public class DamageTracker {
                     damageToShow = rawDamage;
                     switch(ConfigGetter.iconfig.damageSource){
                         case ALL:
-                            DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                            DamageRenderer.renderDamageIndicator(entity, rawDamage, isCritical);
                             break;
                         case PLAYER:
-                            if(Objects.requireNonNull(entity.getLastDamageSource()).getEntity() instanceof Player){
-                                DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                            if(lastDamageSource != null ) {
+                                if (lastDamageSource.getEntity() instanceof Player) {
+                                    DamageRenderer.renderDamageIndicator(entity, rawDamage, isCritical);
+                                }
                             }
                             break;
                         case SELF:
-                            if(Objects.requireNonNull(entity.getLastDamageSource()).getEntity() instanceof LocalPlayer){
-                                DamageRenderer.renderDamageIndicator(entity, rawDamage);
+                            if(lastDamageSource != null ){
+                                if(lastDamageSource.getEntity() instanceof LocalPlayer){
+                                    DamageRenderer.renderDamageIndicator(entity, rawDamage, isCritical);
+                                }
+
                             }
                             break;
                     }
                 }
+                clearAllCriticalHits();
                 showTicks = 40;
             }
             else if (currentHealth > lastHealth) {

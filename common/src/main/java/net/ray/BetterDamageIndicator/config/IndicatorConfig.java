@@ -33,7 +33,10 @@ public class IndicatorConfig implements ConfigData {
     public DamageTracker.DAMAGE_SOURCE damageSource = DamageTracker.DAMAGE_SOURCE.ALL;
     @ConfigEntry.Category("damage")
     @ConfigEntry.Gui.Tooltip(count = 3) //Formatting for damage text, supporting the use of minecraft color codes (e.g. §a). Use %dmg% as damage placeholder.
-    public String damageFormat = "§c-{dmg}";
+    public String damageFormat = "&c-{dmg}";
+    @ConfigEntry.Category("damage")
+    @ConfigEntry.Gui.Tooltip(count = 3) //Formatting for critical hits, supporting the use of minecraft color codes (e.g. §a). Use %dmg% as damage placeholder.
+    public String critDamageFormat = "&c&l-{dmg}";
     @ConfigEntry.Category("damage")
     @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
     @ConfigEntry.Gui.Tooltip(count = 2) //Damage animation
