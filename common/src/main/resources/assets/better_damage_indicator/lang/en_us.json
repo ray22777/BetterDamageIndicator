@@ -34,6 +34,11 @@
   "text.autoconfig.better-damage-indicator.option.damageFormat.@Tooltip[1]": "Supports Minecraft color codes.",
   "text.autoconfig.better-damage-indicator.option.damageFormat.@Tooltip[2]": "Use {dmg} as damage placeholder",
 
+  "text.autoconfig.better-damage-indicator.option.critDamageFormat": "Crit Hit Format",
+  "text.autoconfig.better-damage-indicator.option.critDamageFormat.@Tooltip[0]": "Formatting for critical hits",
+  "text.autoconfig.better-damage-indicator.option.critDamageFormat.@Tooltip[1]": "Supports Minecraft color codes.",
+  "text.autoconfig.better-damage-indicator.option.critDamageFormat.@Tooltip[2]": "Use {dmg} as damage placeholder",
+
 
   "text.autoconfig.better-damage-indicator.option.damageanimations": "Damage Animation",
   "text.autoconfig.better-damage-indicator.option.damageanimations.@Tooltip[0]": "Animation style for damage indicators",

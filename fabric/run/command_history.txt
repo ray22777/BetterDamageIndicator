@@ -1,6 +1,4 @@
 /summon minecraft:zombie
-/gamemode creative
-/summon minecraft:zombie
 /gamerule random_tick_speed 3
 /gamemode adventure
 /gamemode creative
@@ -33,4 +31,20 @@
 /time set day
 /hologram create "&c-10.0" -189 183 57
 /hologram create "&c-10.0" 0 72 29.5
+/damageindicator
+/gamemode creative
+/summon minecraft:zombie
+/gamemode creative
+/summon minecraft:zombie
+/effect give Player439 minecraft:strength infinite 255
+/summon minecraft:iron_golem
+/damageindicator
+/summon minecraft:iron_golem
+/gamemode adventure
+/gamemode creative
+/be
+/damageindicator
+/summon minecraft:zombie
+/gamemode creative
+/summon minecraft:zombie
 /damageindicator

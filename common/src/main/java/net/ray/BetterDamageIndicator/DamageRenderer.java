@@ -1,7 +1,10 @@
 package net.ray.BetterDamageIndicator;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.ray.BetterDamageIndicator.config.ConfigGetter;
 import net.ray.HologramAPI.Hologram;
 import net.ray.HologramAPI.HologramAPI;
@@ -36,11 +39,17 @@ public class DamageRenderer {
 //    }
 
 
-    public static void renderDamageIndicator(Entity entity, float damage) {
+    public static void renderDamageIndicator(LivingEntity entity, float damage, boolean isCritical) {
         if(!ConfigGetter.iconfig.damageEnable) return;
         if(!ConfigGetter.iconfig.enableIndicator) return;
-
-        String result = ConfigGetter.iconfig.damageFormat.replace("{dmg}", String.format("%." + ConfigGetter.iconfig.decimal + "f", damage));
+        String result;
+        if (isCritical) {
+            result = ConfigGetter.iconfig.critDamageFormat.replace("{dmg}",
+                    String.format("%." + ConfigGetter.iconfig.decimal + "f", damage));
+        } else {
+            result = ConfigGetter.iconfig.damageFormat.replace("{dmg}",
+                    String.format("%." + ConfigGetter.iconfig.decimal + "f", damage));
+        }
         Component component = ComponentUtilsParser.parseColorCodes(result);
 
         Random random = new Random();
