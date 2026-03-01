@@ -23,7 +23,7 @@ public class IndicatorConfig implements ConfigData {
     @ConfigEntry.Category("general")
     @ConfigEntry.Gui.Tooltip(count = 1) //How many trailing decimals
     public int decimal = 1;
-    @ConfigEntry.Category("damage")
+    @ConfigEntry.Category("general")
     @ConfigEntry.Gui.Tooltip(count = 1) //Disable Self
     public boolean disableSelf = true;
 
